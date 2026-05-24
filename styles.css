@@ -1,0 +1,552 @@
+/* styles.css — чёткие границы, никакого расплывания */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #050508;
+    background-image: radial-gradient(circle at 20% 30%, rgba(168, 85, 247, 0.15) 0%, #030307 100%);
+    font-family: 'Poppins', 'Segoe UI', 'Montserrat', system-ui, -apple-system, sans-serif;
+    color: #e0ddf5;
+    padding: 2rem 1.5rem;
+    line-height: 1.4;
+}
+
+/* основной контейнер */
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    background: linear-gradient(145deg, #0a0818 0%, #12102a 50%, #181633 100%);
+    border-radius: 24px;
+    padding: 2rem 2rem 3rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(176, 58, 78, 0.4);
+    transition: all 0.2s ease;
+}
+
+/* заголовки */
+h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    background: linear-gradient(120deg, #a855f7, #c084fc, #e9d5ff, #d4af37);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+    border-left: 5px solid #b03a4e;
+    padding-left: 1.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1.8rem 0 1.2rem 0;
+    background: linear-gradient(135deg, #c084fc, #e9d5ff, #d4af37);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 70px;
+    height: 3px;
+    background: linear-gradient(90deg, #b03a4e, #d4af37, #a855f7);
+    border-radius: 3px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    background: linear-gradient(120deg, #c084fc, #e9d5ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+/* блок "Обо мне" — чёткая граница */
+.about-flex {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2rem 0 1rem;
+    background: linear-gradient(135deg, #0d0b1a 0%, #181633 40%, #1f1c42 100%);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(176, 58, 78, 0.6);
+    transition: all 0.3s ease;
+}
+
+.about-flex:hover {
+    border-color: #d4af37;
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.15);
+}
+
+.about-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid #b03a4e;
+    transition: all 0.3s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(176, 58, 78, 0.4);
+    border-color: #d4af37;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+    color: #cdc9f0;
+}
+
+/* карточки качеств — чёткие границы */
+.cards-row {
+    display: flex;
+    gap: 1.8rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 2rem 0 1rem;
+}
+
+.card {
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+    flex: 1;
+    min-width: 160px;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 2px solid;
+}
+
+/* Умная — с черным отливом */
+.card:nth-child(1) {
+    background: linear-gradient(145deg, #0a0818 0%, #181633 60%, #1a1740 100%);
+    border-color: #3a3a6a;
+}
+
+.card:nth-child(1):hover {
+    background: linear-gradient(145deg, #12102a 0%, #1f1c42 60%, #25224d 100%);
+    border-color: #5a5a8a;
+    transform: translateY(-6px);
+}
+
+/* Сильная — с красным отливом */
+.card:nth-child(2) {
+    background: linear-gradient(145deg, #181633 0%, #1f1c42 50%, #2a1a30 100%);
+    border-color: #b03a4e;
+}
+
+.card:nth-child(2):hover {
+    background: linear-gradient(145deg, #1f1c42 0%, #25224d 50%, #3a1a3a 100%);
+    border-color: #d04a5e;
+    transform: translateY(-6px);
+}
+
+/* Дружелюбная — с золотым отливом */
+.card:nth-child(3) {
+    background: linear-gradient(145deg, #181633 0%, #1f1c42 50%, #2a2418 100%);
+    border-color: #d4af37;
+}
+
+.card:nth-child(3):hover {
+    background: linear-gradient(145deg, #1f1c42 0%, #25224d 50%, #3a3018 100%);
+    border-color: #f0c847;
+    transform: translateY(-6px);
+}
+
+.card h2 {
+    font-size: 1.7rem;
+    margin: 0 0 0.5rem 0;
+    display: block;
+    background: linear-gradient(135deg, #d8b4fe, #e9d5ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.card h2::after {
+    display: none;
+}
+
+.card p {
+    color: #b9b4e6;
+    font-size: 1rem;
+}
+
+/* секция KiberOne */
+.kiber-section {
+    background: linear-gradient(135deg, #0d0b1a 0%, #181633 50%, #1f1c42 100%);
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    border: 2px solid rgba(212, 175, 55, 0.5);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.kiber-section:hover {
+    border-color: #d4af37;
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.15);
+}
+
+.kiber-img {
+    width: 200px;
+    border-radius: 16px;
+    border: 2px solid #b03a4e;
+}
+
+.kiber-info {
+    flex: 1;
+}
+
+.kiber-info p {
+    margin: 0.6rem 0;
+    font-size: 1.05rem;
+    color: #cdc9f0;
+}
+
+.kiber-link {
+    display: inline-block;
+    margin-top: 0.7rem;
+    background: linear-gradient(90deg, #7c3aed, #a855f7);
+    color: white;
+    padding: 0.7rem 1.8rem;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.kiber-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+    background: linear-gradient(90deg, #8b5cf6, #b03a4e);
+}
+
+/* модули — чёткие границы */
+.modules-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 1.5rem 0 2rem;
+    justify-content: center;
+}
+
+.module-card {
+    border-radius: 20px;
+    width: 230px;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 2px solid;
+}
+
+/* Minecraft — черный отлив */
+.module-card:nth-child(1) {
+    background: linear-gradient(145deg, #0a0818 0%, #14122e 60%, #1a1740 100%);
+    border-color: #4a4a7a;
+}
+
+/* Web-Master — красный отлив */
+.module-card:nth-child(2) {
+    background: linear-gradient(145deg, #14122e 0%, #181633 50%, #2a1a30 100%);
+    border-color: #b03a4e;
+}
+
+/* Figma — золотой отлив */
+.module-card:nth-child(3) {
+    background: linear-gradient(145deg, #14122e 0%, #181633 50%, #2a2418 100%);
+    border-color: #d4af37;
+}
+
+/* Tilda — смешанный отлив */
+.module-card:nth-child(4) {
+    background: linear-gradient(145deg, #0a0818 0%, #181633 50%, #2a2418 100%);
+    border-color: #8a6a2a;
+}
+
+.module-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.module-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 0.7rem;
+    border-bottom: 2px solid #b03a4e;
+}
+
+.module-card h2 {
+    font-size: 1.3rem;
+    margin: 0.5rem 0 0.3rem;
+    display: inline-block;
+    background: linear-gradient(135deg, #d8b4fe, #e9d5ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.module-card h2::after {
+    display: none;
+}
+
+.module-card p {
+    font-size: 0.85rem;
+    color: #b9b4e6;
+    margin: 0.5rem 0;
+}
+
+/* таблица увлечений — чёткие границы, не расплываются */
+.hobby-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    border: 2px solid #b03a4e;
+}
+
+.hobby-table th {
+    background: linear-gradient(90deg, #7c3aed, #b03a4e);
+    color: white;
+    font-weight: 700;
+    font-size: 1.4rem;
+    padding: 1.2rem 1rem;
+    border-bottom: 2px solid #d4af37;
+}
+
+.hobby-table td {
+    padding: 1.2rem 1rem;
+    text-align: left;
+    vertical-align: middle;
+    color: #cdc9f0;
+    font-size: 1.3rem;
+    border-bottom: 1px solid rgba(176, 58, 78, 0.4);
+}
+
+/* Убираем двойные границы */
+.hobby-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Программирование — черный отлив */
+.hobby-table tbody tr:nth-child(1) {
+    background: linear-gradient(90deg, #0a0818 0%, #181633 100%);
+}
+
+/* Футбол — красный отлив */
+.hobby-table tbody tr:nth-child(2) {
+    background: linear-gradient(90deg, #14122e 0%, #2a1a30 100%);
+}
+
+/* Скалолазание — золотой отлив */
+.hobby-table tbody tr:nth-child(3) {
+    background: linear-gradient(90deg, #14122e 0%, #2a2418 100%);
+}
+
+/* Роллер-Спорт — смешанный */
+.hobby-table tbody tr:nth-child(4) {
+    background: linear-gradient(90deg, #0a0818 0%, #2a1a30 100%);
+}
+
+/* Добавляем левую цветную границу для каждой строки таблицы */
+.hobby-table tbody tr td:first-child {
+    border-left: 3px solid;
+}
+
+.hobby-table tbody tr:nth-child(1) td:first-child {
+    border-left-color: #5a5a8a;
+}
+
+.hobby-table tbody tr:nth-child(2) td:first-child {
+    border-left-color: #b03a4e;
+}
+
+.hobby-table tbody tr:nth-child(3) td:first-child {
+    border-left-color: #d4af37;
+}
+
+.hobby-table tbody tr:nth-child(4) td:first-child {
+    border-left-color: #8a6a2a;
+}
+
+.hobby-table td img {
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #b03a4e;
+    transition: 0.2s;
+}
+
+.hobby-table td img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 14px rgba(212, 175, 55, 0.5);
+    border-color: #d4af37;
+}
+
+/* кнопка "наверх" */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #b03a4e, #7c3aed, #d4af37);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 2px solid #d4af37;
+    opacity: 0.8;
+    z-index: 100;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.scroll-top:hover {
+    opacity: 1;
+    transform: translateY(-3px) scale(1.05);
+    background: linear-gradient(135deg, #d4af37, #b03a4e, #a855f7);
+    color: #12102a;
+}
+
+/* ссылки в тексте */
+a {
+    background: linear-gradient(120deg, #c084fc, #e9d5ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    background: linear-gradient(120deg, #d4af37, #fbbf24);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* адаптивность */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    .container {
+        padding: 1.2rem;
+    }
+    h1 {
+        font-size: 2.4rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    .about-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cards-row {
+        gap: 1rem;
+    }
+    .card {
+        min-width: 130px;
+    }
+    .module-card {
+        width: 180px;
+    }
+    .hobby-table th,
+    .hobby-table td {
+        padding: 0.8rem;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .hobby-table tr {
+        display: block;
+        margin-bottom: 1rem;
+        border-radius: 16px;
+        border: 2px solid;
+        overflow: hidden;
+    }
+    .hobby-table tbody tr:nth-child(1) {
+        border-color: #5a5a8a;
+    }
+    .hobby-table tbody tr:nth-child(2) {
+        border-color: #b03a4e;
+    }
+    .hobby-table tbody tr:nth-child(3) {
+        border-color: #d4af37;
+    }
+    .hobby-table tbody tr:nth-child(4) {
+        border-color: #8a6a2a;
+    }
+    .hobby-table td {
+        text-align: center;
+        border-bottom: 1px solid rgba(176, 58, 78, 0.3);
+    }
+    .hobby-table td:first-child {
+        border-left: none;
+    }
+    .hobby-table th {
+        display: none;
+    }
+    .hobby-table td img {
+        width: 120px;
+        height: 85px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .module-card {
+        width: 100%;
+        max-width: 260px;
+    }
+    .kiber-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hobby-table td img {
+        width: 100px;
+        height: 75px;
+    }
+}
